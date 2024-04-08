@@ -1,9 +1,11 @@
 # Final Project: Navigation
 
 ## 1. Intro
-Our goal is to develop a robot with autonomous navigation capability. A variety of sensors, actuators and functionalities will be integrated on the board. In other words, the robot will be "complicated". To ease the complication of managing such a system, [ROS 2 Humble](https://docs.ros.org/en/humble/) will be employed. Given a few start up materials, you'll come up with your design of the mobile robot base; assemble the physical body; and practice basic control and management using ROS.  
+Welcome to your second (final) project. The goal of this project is to autonomously navigate your robot to a specific location. Your starting point and destination is illustrated in the diagram below. 
 
 ## 2. Quick Start
+[Nav2](https://navigation.ros.org/index.html) is an open-sourced project that helps ROS-powered robots to achieve such a goal. It contains valuable tutorials and guides to set up your robot. Use it as your main reference. 
+
 **Note: all the customizable items are wrapped in `<>`. DO NOT copy them directly!**
 - Since this repository may serve as a container to host a few ROS packages, consider to clone and place this repository under the ROS workspace you are working on. An example of the local location and structure of this repository can be as follows.![Alt text](repo_structure.png)
 - To create a ROS package in your local repository:
@@ -13,13 +15,12 @@ ros2 pkg create --build-type ament-python <package name>
 ```
 
 ## 3. Requirements
-1. Build a functional mobile robot base.
-2. Program a microcontroller to drive motors and monitor the robot's status.
-3. Install and configure ROS. Develop ROS package(s) to publish robot's state and listen to remote control commands. 
-4. Test and analyze features of the robot.
+1. Simulated Navigation.
+2. Real World Navigation.
+3. Thinking and Analysis.
+4. Documentation. 
 
 ### 3.1 Coding
-- Please upload your code to this repository. 
 - **(25%)** Differential driver on microcontroller:
     - Reads linear and angular velocity commands (for the robot) transfered from the serial port.
     - Outputs signals to approapriate GPIO pins to drive the motor at right speed and direction.
