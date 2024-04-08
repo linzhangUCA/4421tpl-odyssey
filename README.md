@@ -1,4 +1,4 @@
-# Project 1: Robot Setup
+# Final Project: Navigation
 
 ## 1. Intro
 Our goal is to develop a robot with autonomous navigation capability. A variety of sensors, actuators and functionalities will be integrated on the board. In other words, the robot will be "complicated". To ease the complication of managing such a system, [ROS 2 Humble](https://docs.ros.org/en/humble/) will be employed. Given a few start up materials, you'll come up with your design of the mobile robot base; assemble the physical body; and practice basic control and management using ROS.  
