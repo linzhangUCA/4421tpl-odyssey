@@ -11,7 +11,7 @@ Welcome to your second (final) project. The goal of this project is to autonomou
 
 ### 3.1 Coding
 > [Nav2](https://navigation.ros.org/index.html) is an open-sourced project that helps ROS-powered robots to achieve such a goal. It also provides valuable tutorials and guides to help you set up your robot. 
-- **(30%)** Simulated Navigation:
+- **(20%)** Simulated Navigation:
     - Build a URDF described robot mobel.
     - Create an SDF file to model the designated navigation environment.
     - Simulate the world model (sdf) and the robot model (urdf) in Gazebo.
@@ -29,8 +29,7 @@ Welcome to your second (final) project. The goal of this project is to autonomou
 - Have the documents well organized (break it down into sections). 
 - Please include following contents in your documents.
     1. **(10%)** Update the old supportive documents with new configurations (wiring diagram, mechanical schematics, software workflow, etc.). If not changed, provide a link or a copy of the old files.
-    2. **(10%)** 
-    3. **(10%)** Mechanical features (describe/list weight, max velocity, max payload capacity)
-    4. **(8%)** Software architecture (illustrate key components/modules and communication relationships in a graph) 
-    5. **(2%)** Summary this project. You can share any thoughs or interesting findings, or discuss the future of the applications.
+    2. **(18%)** Describe the approaches your team employed to map the world, to localize the robot, to plan the trajectories and to follow the trajectories(the more technical details the better).
+    3. **(10%)** Read the [NSPE Code of Ethics for Engineers](https://www.nspe.org/resources/ethics/code-ethics), discuss pros and cons of this project with respect to the [Code](https://www.nspe.org/resources/ethics/code-ethics). **You may want to submit such a discussion individually.** 
+    5. **(2%)** Summarize achievements you've made in this project (bulleted items are welcome). You can share any thoughs or interesting findings, or discuss the future of the applications here as well.
 
