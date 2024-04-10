@@ -38,8 +38,15 @@ ros2 launch diffbot_navigation localize_nav.launch.py
 ```
 
 ### 2.2 Trouble Shooting
+- **Q: What if I don't have an IMU?**
 
+A: Open the extended Kalman-Filter configuration file: [`ekf.yaml`](diffbot_navigation/config/ekf.yaml), comment or delete the `imu0` related contents.
+- **Q: How do I save a map?**
 
+A: In Rviz, click `Panels` > `Add New Panel`, then select `SlamToolboxPlugin`, then press `OK`. You'll find a new panel opened on the left of your Rviz window. Select the text box next to the `Serialize Map` button, input the **full path** of your map file name. For example: `/home/<USERNAME>/<ROS_WORKSPACE_NAME>/src/<PROJECT_REPOSITORY_NAME>/diffbot_navigation/map/serialized_playground`. You can achieve this by right click the [`map`](diffbot_navigation/map/) folder in vscode, select `Copy Path`, then paste the path to the `Serialize Map` text box(**DO NOT forget to append a map name**). 
+- **Q: How do I load a map?**
+
+A: Open [`slam_localize_params`](diffbot_navigation/config/slam_localize_params.yaml), find the `map_file_name:` parameter (around line 19), edit the path according to your saved map path and name. For example: `/home/<USERNAME>/<ROS_WORKSPACE_NAME>/src/<PROJECT_REPOSITORY_NAME>/diffbot_navigation/map/serialized_playground`.
 
 ## 3. Requirements
 1. Simulated Navigation.
