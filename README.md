@@ -1,7 +1,7 @@
 # Final Project: Autonomous Navigation
 
 ## 1. Intro
-Welcome to your second (final) project. The goal of this project is to autonomously navigate your robot to a specific location. Your starting point and destination is illustrated in the diagram below. 
+Welcome to your second (final) project. The goal of this project is to autonomously navigate your robot to a specific location. Your starting point and destination is illustrated in the diagrams below. 
 
 ![path](figures/lsc_nav_floorplan.png)
 ![dimensions](figures/lsc_nav_dimensions.png)
