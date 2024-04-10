@@ -1,4 +1,4 @@
-# Final Project: Autonomous Navigation
+# Final Project: ROS Navigation
 
 ## 1. Intro
 Welcome to your second (final) project. The goal of this project is to autonomously navigate your robot to a specific location. Your starting point and destination is illustrated in the diagrams below. 
