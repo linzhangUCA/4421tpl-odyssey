@@ -84,14 +84,6 @@ def generate_launch_description():
             {'use_sim_time': LaunchConfiguration('use_sim_time')}
         ]
     )
-    
-    rviz_node = Node(
-        package="rviz2",
-        executable="rviz2",
-        name="rviz2",
-        output="screen",
-        arguments=["-d", LaunchConfiguration("rvizconfig")],
-    )
 
     return launch.LaunchDescription(
         [
@@ -102,6 +94,5 @@ def generate_launch_description():
             gazebo_process,
             spawn_entity,
             robot_localization_node,
-            rviz_node,
         ]
     )
