@@ -5,14 +5,36 @@ Welcome to your second (final) project. The goal of this project is to autonomou
 
 ![path](figures/lsc_nav_floorplan.png)
 ![dimensions](figures/lsc_nav_dimensions.png)
-## 2. Example Package Usage
-You can use the package in this repository as a starting point (Clone this repository down to your computer using VS Code) to build your own ROS package.
+## 2. Example Usage
+You can use the `diffbot_navigation` package in this repository as a starting point (Clone this repository down to your computer using VS Code) to continue developing. **[`diffbot.urdf.xacro`](diffbot_navigation/urdf/diffbot.urdf.xacro) is the essential of this project**.
+
+1. Build Package
 ```bash
 cd <your ros workspace>
 colcon build
 source install/local_setup.bash
-ros2 launch diffbot_navigation mapping.launch.py
 ```
+2. Visualize Robot Model 
+```bash
+# Make sure your package has been built
+ros2 launch diffbot_navigation visualize.launch.py
+```
+3. Gazebo Simulation 
+```bash
+# Make sure your package has been built
+ros2 launch diffbot_navigation simulate.launch.py
+```
+4. Create a Map and Navigate
+```bash
+# Make sure your package has been built
+ros2 launch diffbot_navigation create_map_nav.launch.py
+```
+5. Localize in a Map and Navigate
+```bash
+# Make sure your package has been built
+ros2 launch diffbot_navigation localize_nav.launch.py
+```
+
 
 ## 3. Requirements
 1. Simulated Navigation.
