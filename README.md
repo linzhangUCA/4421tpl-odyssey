@@ -5,7 +5,9 @@ Welcome to your second (final) project. The goal of this project is to autonomou
 
 ![path](figures/lsc_nav_floorplan.png)
 ![dimensions](figures/lsc_nav_dimensions.png)
-## 2. Example Usage
+
+## 2. Instructions
+### 2.1 Example Usage
 You can use the `diffbot_navigation` package in this repository as a starting point (Clone this repository down to your computer using VS Code) to continue developing. **[`diffbot.urdf.xacro`](diffbot_navigation/urdf/diffbot.urdf.xacro) is the essential of this project**.
 
 1. Build Package
@@ -35,11 +37,14 @@ ros2 launch diffbot_navigation create_map_nav.launch.py
 ros2 launch diffbot_navigation localize_nav.launch.py
 ```
 
+### 2.2 Trouble Shooting
+
+
 
 ## 3. Requirements
 1. Simulated Navigation.
 2. Real World Navigation.
-3. Thinking, Analysis, Discussion.
+3. Thinking, Analysis, Evaluation, Discussion.
 4. Documentation. 
 
 ### 3.1 Coding
