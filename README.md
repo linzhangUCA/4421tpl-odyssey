@@ -2,8 +2,9 @@
 
 ## 1. Intro
 Welcome to your second (final) project. The goal of this project is to autonomously navigate your robot to a specific location. Your starting point and destination is illustrated in the diagram below. 
-![path](figures/lsc_nav_floorplan.png)
 
+![path](figures/lsc_nav_floorplan.png)
+![dimensions](figures/lsc_nav_dimensions.png)
 ## 2. Example Package Usage
 You can use the package in this repository as a starting point (Clone this repository down to your computer using VS Code) to build your own ROS package.
 ```bash
