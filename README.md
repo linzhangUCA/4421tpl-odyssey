@@ -1,7 +1,7 @@
 # Final Project: ROS Navigation
 
 ## 1. Intro
-Welcome to your second (final) project. The goal of this project is to autonomously navigate your robot to a specific location. Your starting point and destination is illustrated in the diagrams below. 
+Welcome to your second (final) project. The goal of this project is to autonomously navigate your robot (from an entrance of Lewis Science Center to the Physics Department office). Your starting point and destination is illustrated in the diagrams below. 
 
 ![path](figures/lsc_nav_floorplan.png)
 ![dimensions](figures/lsc_nav_dimensions.png)
