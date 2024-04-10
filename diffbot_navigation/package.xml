@@ -4,7 +4,7 @@
   <name>diffbot_navigation</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="email@email.adress">TODO: Maintainer name</maintainer>
+  <maintainer email="todo@todo.todo">TODO: Maintainer name</maintainer>
   <license>TODO: License declaration</license>
 
   <exec_depend>joint_state_publisher</exec_depend>
@@ -13,6 +13,7 @@
   <exec_depend>rviz2</exec_depend>
   <exec_depend>xacro</exec_depend>
   <exec_depend>gazebo_ros_pkgs</exec_depend>
+  <exec_depend>robot_localization</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
