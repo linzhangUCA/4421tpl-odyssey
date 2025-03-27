@@ -1,6 +1,6 @@
 # Final Project: The Odyssey
 
-## 1. Intro
+## Intro
 Welcome to your final (second) project. 
 In this project, your robot is expected to navigate from an entrance of Lewis Science Center to the PAE Department office, **autonomously**. 
 The starting point and destination is illustrated in the diagrams below.
@@ -8,6 +8,10 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 
 ![path](figures/lsc_nav_floorplan.png)
 ![dimensions](figures/lsc_nav_dimensions.png)
+
+## Objectives
+- Practice ROS navigation stack with [Nav2](https://docs.nav2.org/).
+- Verify delivery solutions.
 
 ## 2. Instructions
 ### 2.1 Example Usage
