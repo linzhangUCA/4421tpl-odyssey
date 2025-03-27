@@ -1,4 +1,4 @@
-# Final Project: ROS Navigation
+# Final Project: The Odyssey
 
 ## 1. Intro
 Welcome to your second (final) project. The goal of this project is to autonomously navigate your robot (from an entrance of Lewis Science Center to the Physics Department office). Your starting point and destination is illustrated in the diagrams below. 
