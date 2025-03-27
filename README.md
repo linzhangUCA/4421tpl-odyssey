@@ -1,7 +1,10 @@
 # Final Project: The Odyssey
 
 ## 1. Intro
-Welcome to your second (final) project. The goal of this project is to autonomously navigate your robot (from an entrance of Lewis Science Center to the Physics Department office). Your starting point and destination is illustrated in the diagrams below. 
+Welcome to your final (second) project. 
+In this project, your robot is expected to navigate from an entrance of Lewis Science Center to the PAE Department office, **autonomously**. 
+The starting point and destination is illustrated in the diagrams below.
+To test the navigation is successful or not, your robot needs to deliver a cup of coffee to the front desk in the office. 
 
 ![path](figures/lsc_nav_floorplan.png)
 ![dimensions](figures/lsc_nav_dimensions.png)
