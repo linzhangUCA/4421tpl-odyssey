@@ -6,7 +6,10 @@ In this project, your robot is expected to navigate from an entrance of Lewis Sc
 The starting point and destination is illustrated in the diagrams below.
 To test the navigation is successful or not, your robot needs to deliver a cup of coffee to the front desk in the office. 
 
+- The floor plan for the interested area in Lewis Science Center is shown below.
 ![path](figures/lsc_nav_floorplan.png)
+
+- A roughly measured floor dimensions is illustrated below.
 ![dimensions](figures/lsc_nav_dimensions.png)
 
 ## Objectives
