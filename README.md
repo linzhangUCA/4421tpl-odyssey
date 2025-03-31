@@ -13,6 +13,13 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 - Practice ROS navigation stack with [Nav2](https://docs.nav2.org/).
 - Verify delivery solutions.
 
+## Requirements
+1. Develope ROS node(s) for controlling and monitoring the robot. 
+    - Publish the `/odom` topic with [nav_msgs/msg/Odometry](https://docs.ros2.org/foxy/api/nav_msgs/msg/Odometry.html) message.
+      > You'll need to calculate the robot's pose and read its velocity to fill the `nav_msgs/msg/Odometry` message. Refer to [Assignment 3](https://classroom.github.com/a/R9LNWs9-).
+    - Broadcast transformation from `odom` frame to `base_link` frame.
+      > Fill robot's pose and velocity to [geometry_msgs/msg/TransformStamped](https://docs.ros2.org/foxy/api/geometry_msgs/msg/TransformStamped.html) message. Refer to [Assignment 5]().
+
 ## 2. Instructions
 ### 2.1 Example Usage
 You can use the `diffbot_navigation` package in this repository as a starting point (Clone this repository down to your computer using VS Code) to continue developing. **[`diffbot.urdf.xacro`](diffbot_navigation/urdf/diffbot.urdf.xacro) is the essential of this project**.
