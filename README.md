@@ -17,11 +17,18 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 - Verify delivery solutions.
 
 ## Requirements
+### Software
 1. Develope ROS node(s) for controlling and monitoring the robot. 
     - Publish the `/odom` topic with [nav_msgs/msg/Odometry](https://docs.ros2.org/foxy/api/nav_msgs/msg/Odometry.html) message.
       > You'll need to calculate the robot's pose and read its velocity to fill the `nav_msgs/msg/Odometry` message. Refer to [Assignment 3](https://classroom.github.com/a/R9LNWs9-).
     - Broadcast transformation from `odom` frame to `base_link` frame.
       > Fill robot's pose and velocity to [geometry_msgs/msg/TransformStamped](https://docs.ros2.org/foxy/api/geometry_msgs/msg/TransformStamped.html) message. Refer to [Assignment 5]().
+> Run above node(s) on **Raspberry Pi**
+2. Organize a launch file for bringing up the robot's hardware interface.
+3. Organize a launch file for mapping.
+4. Organize a launch file for autonomous navigation.
+
+### Documentation
 
 ## 2. Instructions
 ### 2.1 Example Usage
