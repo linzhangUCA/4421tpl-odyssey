@@ -27,13 +27,13 @@ Include/Upload the pakcage in this repository.
     - Publish **`/odom`** topic with [nav_msgs/msg/Odometry](https://docs.ros2.org/foxy/api/nav_msgs/msg/Odometry.html) message according to robot's actual velocity received from Pico.
     - Broadcast transformation **from `odom` frame to `base_link` frame**.
     - Subscribe to `/cmd_vel` topic, send robot's target velocity to Pico use values embedded in the `geometry_msgs/msg/Twist` message.   
-    > Run this node on **Raspberry Pi**
-2. Organize a launch file for bringing up the robot's hardware interface.
+    > Run this node on **Raspberry Pi**.
+2. Organize a launch file: **`bringup_driver.launch.py`**, to get the robot ready for SLAM.
     - Broadcast static transformation from `base_link` to `base_footprint`.
     - Broadcast static transformation from `base_link` to `lidar_link`.
-    - Run `rplidar_composition` executable with its `frame_id` parameter set to `'lidar_link'` and `angle_compensate` parameter set to `True`
-    - Run 
-    > Run the node(s) on **Raspberry Pi**
+    - Start `rplidar_node` node with its `frame_id` parameter set to `'lidar_link'` and `angle_compensate` parameter set to `True`.
+    - Start `hardware_interface` node.
+    > Launch this file on **Raspberry Pi**.
 3. Organize a launch file for mapping.
 4. Organize a launch file for autonomous navigation.
 
