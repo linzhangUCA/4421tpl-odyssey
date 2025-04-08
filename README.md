@@ -24,21 +24,22 @@ Create or reuse a ROS package to host following modules.
 Include/Upload the pakcage in this repository.
 
 1. Develope a **`hardware_interface`** node for controlling and monitoring the robot. 
-    - Publish **`/odom`** topic with [nav_msgs/msg/Odometry](https://docs.ros2.org/foxy/api/nav_msgs/msg/Odometry.html) message according to robot's actual velocity received from Pico.
-    - Broadcast transformation **from `odom` frame to `base_link` frame**.
+    - Publish **`/odom`** topic with `nav_msgs/msg/Odometry` message according to robot's actual velocity received from Pico.
+    - Broadcast transformation **from `odom` frame to `base_link` frame** with `geometry_msgs/msg/TransformStamped` message.
     - Subscribe to `/cmd_vel` topic, send robot's target velocity to Pico use values embedded in the `geometry_msgs/msg/Twist` message.   
     > Run this node on **Raspberry Pi**.
 2. Organize a launch file: **`bringup_driver.launch.py`**, to get the robot ready for SLAM.
-    - Broadcast static transformation from `base_link` to `base_footprint`.
-    - Broadcast static transformation from `base_link` to `lidar_link`.
+    - Broadcast reasonable static transformation from `base_link` to `base_footprint`.
+    - Broadcast reasonable static transformation from `base_link` to `lidar_link`.
     - Start `rplidar_node` node with its `frame_id` parameter set to `'lidar_link'` and `angle_compensate` parameter set to `True`.
     - Start `hardware_interface` node.
     > Launch this file on **Raspberry Pi**.
-3. Organize a launch file for mapping.
-4. Organize a launch file for autonomous navigation.
+3. Organize a launch file: **`create_map.launch.py`** , to map interested area.
+   
+4. Organize a launch file: **`navigation.launch.py`**, for autonomous navigation.
 
 #### Hints
-- To publish `/odom` topic and broadcast tf from `odom` to `base_link`, you'll need to calculate the robot's pose and read its velocity to fill the `nav_msgs/msg/Odometry` and `geometry_msgs/msg/TransformStamped` message .
+- To publish `/odom` topic and broadcast tf from `odom` to `base_link`, you'll need to calculate the robot's pose and read its velocity to fill the `nav_msgs/msg/Odometry` and `geometry_msgs/msg/TransformStamped` message.
   Refer to [Assignment 3](https://classroom.github.com/a/R9LNWs9-) and [Assignment 5](https://classroom.github.com/a/cGOzC79L).
 - .
 ### Documentation
