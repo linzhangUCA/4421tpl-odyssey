@@ -13,21 +13,34 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 ![dimensions](figures/lsc_nav_dimensions.png)
 
 ## Objectives
+- Prepare autonomous navigation with [slam_toolbox](https://github.com/SteveMacenski/slam_toolbox).
 - Practice ROS navigation stack with [Nav2](https://docs.nav2.org/).
 - Verify delivery solutions.
 
 ## Requirements
-### Software
-1. Develope ROS node(s) for controlling and monitoring the robot. 
-    - Publish the `/odom` topic with [nav_msgs/msg/Odometry](https://docs.ros2.org/foxy/api/nav_msgs/msg/Odometry.html) message.
-      > You'll need to calculate the robot's pose and read its velocity to fill the `nav_msgs/msg/Odometry` message. Refer to [Assignment 3](https://classroom.github.com/a/R9LNWs9-).
-    - Broadcast transformation from `odom` frame to `base_link` frame.
-      > Fill robot's pose and velocity to [geometry_msgs/msg/TransformStamped](https://docs.ros2.org/foxy/api/geometry_msgs/msg/TransformStamped.html) message. Refer to [Assignment 5]().
-> Run above node(s) on **Raspberry Pi**
+### ROS Package
+
+Create or reuse a ROS package to host following modules. 
+Include/Upload the pakcage in this repository.
+
+1. Develope a **`hardware_interface`** node for controlling and monitoring the robot. 
+    - Publish **`/odom`** topic with [nav_msgs/msg/Odometry](https://docs.ros2.org/foxy/api/nav_msgs/msg/Odometry.html) message according to robot's actual velocity received from Pico.
+    - Broadcast transformation **from `odom` frame to `base_link` frame**.
+    - Subscribe to `/cmd_vel` topic, send robot's target velocity to Pico use values embedded in the `geometry_msgs/msg/Twist` message.   
+    > Run this node on **Raspberry Pi**
 2. Organize a launch file for bringing up the robot's hardware interface.
+    - Broadcast static transformation from `base_link` to `base_footprint`.
+    - Broadcast static transformation from `base_link` to `lidar_link`.
+    - Run `rplidar_composition` executable with its `frame_id` parameter set to `'lidar_link'` and `angle_compensate` parameter set to `True`
+    - Run 
+    > Run the node(s) on **Raspberry Pi**
 3. Organize a launch file for mapping.
 4. Organize a launch file for autonomous navigation.
 
+#### Hints
+- To publish `/odom` topic and broadcast tf from `odom` to `base_link`, you'll need to calculate the robot's pose and read its velocity to fill the `nav_msgs/msg/Odometry` and `geometry_msgs/msg/TransformStamped` message .
+  Refer to [Assignment 3](https://classroom.github.com/a/R9LNWs9-) and [Assignment 5](https://classroom.github.com/a/cGOzC79L).
+- .
 ### Documentation
 
 ## 2. Instructions
