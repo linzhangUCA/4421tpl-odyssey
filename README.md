@@ -29,7 +29,7 @@ Include/Upload the pakcage in this repository.
 
 1. Develope a **`hardware_interface`** node for controlling and monitoring the robot. 
     - Publish **`/odom`** topic with `nav_msgs/msg/Odometry` message according to robot's actual velocity received from Pico.
-    - Broadcast transformation **from `odom` frame to `base_link` frame** with `geometry_msgs/msg/TransformStamped` message.
+    - Broadcast transformation from **`odom`** frame to **`base_link`** frame with `geometry_msgs/msg/TransformStamped` message.
     - Subscribe to `/cmd_vel` topic, send robot's target velocity to Pico use values embedded in the `geometry_msgs/msg/Twist` message.   
     > Run this node on **Raspberry Pi**.
 2. Develop a launch file: **`bringup_driver.launch.py`**, to get the robot ready for SLAM.
@@ -60,13 +60,18 @@ Include/Upload the pakcage in this repository.
         - `params_file` set to a customed `nav_configs.yaml`.
     - Start `rviz2`.
     > Launch this file on **your laptop**.
-7. Fill correct metadata in `package.xml` and `setup.py`.
+7. Fill correct information in `package.xml` and `setup.py`.
    
 #### Hints
 - Refer to `[homer_control](https://github.com/linzhangUCA/homer/tree/main/homer_control)` package. You can find examples for every step.
 - To publish `/odom` topic and broadcast tf from `odom` to `base_link`, you'll need to calculate the robot's pose and read its velocity to fill the `nav_msgs/msg/Odometry` and `geometry_msgs/msg/TransformStamped` message.
   Refer to [Assignment 3](https://classroom.github.com/a/R9LNWs9-) and [Assignment 5](https://classroom.github.com/a/cGOzC79L).
-- .
+- Read ROS [tutorials](https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Launch/Launch-Main.html) about **Launch** if you feel difficult to get the launch files managed.
+- [HomeR's documentation](https://linzhanguca.github.io/homer/) site could be helpful.
+- [Articulated Robotics](https://www.youtube.com/@ArticulatedRobotics) made a series of great videos to teach you how to:
+  - [Easy SLAM with ROS using slam_toolbox](https://www.youtube.com/watch?v=ZaiA3hWaRzE)
+  - [Making robot navigation easy with Nav2 and ROS!](https://www.youtube.com/watch?v=jkoGkAd0GYk)
+  
 ### Documentation
 - Use this `README` file or create a separate markdown file or upload a pdf file for the documentation.
 - Describe the project in concise words. 
