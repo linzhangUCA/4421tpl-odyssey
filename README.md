@@ -75,6 +75,7 @@ Include/Upload the pakcage in this repository.
   You can find examples for every step.
 - To publish `/odom` topic and broadcast tf from `odom` to `base_link`, you'll need to calculate the robot's pose and read its velocity to fill the `nav_msgs/msg/Odometry` and `geometry_msgs/msg/TransformStamped` message.
   Refer to [Assignment 3](https://classroom.github.com/a/R9LNWs9-) and [Assignment 5](https://classroom.github.com/a/cGOzC79L).
+- Look for parameters related to `radius` and `vel` in **`nav_configs.yaml`**, tweaking them to change behavior of your robot.
 - Read ROS [tutorials](https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Launch/Launch-Main.html) about **Launch** if you feel difficult to get the launch files managed.
 - [HomeR's documentation](https://linzhanguca.github.io/homer/) site could be helpful.
 - [Articulated Robotics](https://www.youtube.com/@ArticulatedRobotics) made a series of great videos to teach you how to:
