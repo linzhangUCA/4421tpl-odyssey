@@ -16,16 +16,17 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 - Prepare autonomous navigation with [slam_toolbox](https://github.com/SteveMacenski/slam_toolbox).
 - Practice ROS navigation stack with [Nav2](https://docs.nav2.org/).
 - Verify delivery solutions.
+**NOTE**: you will work with a highly integrated system, any subtle malfunction could fail the entire system.
+Check your wire connections and battery health, regularly. Do unit tests if any unit is not functional. And don't be afraid to start everything over.
 
 ## Requirements
-- Please complete the contents required below and strictly follow the required file names.
+
+### ROS Package
+- Create or reuse a ROS package to host following modules. 
+Include/Upload the pakcage in this repository.
 - Grader(s) will download your package to a computer with ROS 2 installed.
   Your package will be built and verified if all the executables and launch files are functional or not.
   
-### ROS Package
-
-Create or reuse a ROS package to host following modules. 
-Include/Upload the pakcage in this repository.
 
 1. Develope a **`hardware_interface`** node for controlling and monitoring the robot. 
     - Publish **`/odom`** topic with `nav_msgs/msg/Odometry` message according to robot's actual velocity received from Pico.
@@ -83,18 +84,14 @@ Include/Upload the pakcage in this repository.
 3. (5%) Illustrate a graph of ROS Nodes with all participating/active nodes and topics.
 4. (15%) Search and read the SLAM algorithm you've been used in this project.
    Imagine your readers are engineering major freshmen.
-   Explain following approaches as concise and as possible:
-   1. Localization algorithm with.
-      1. name
-      2. mechanism/process
-   2. Mapping algorithm with.
-      1. name
-      2. mechanism/process
-  > Math is welcome.
+   State following with your own words and math expressions:
+   1. List of key concepts, algorithms, functionalities.
+   2. Descriptions of the mechanism/process of the key features. 
      
 ### Demonstration
+Deliver the coffee using your robot
 You are expected to demonstrate the robot not only to the people from Annex 105, but also to anyone who may show up on the hallway of Lewis Science Center.
-Your demonstration 
+Your demonstration should include two parts.
 1. 5-minute introduction include:
    - Your team
    - Your robot
