@@ -87,22 +87,27 @@ Include/Upload the pakcage in this repository.
      
 ### (30%) Demonstration
 **Time: Thursday, May 1st @ 11 A.M.**
-Deliver a cup of coffee to PAE department office using your robot.
-You are expected to demonstrate the robot not only to the people from Annex 105, but also to anyone who may show up on the hallway of Lewis Science Center.
+
+You are expected to demonstrate the robot not only to the people from Annex 105, but also to anyone who may show up in the hallway of Lewis Science Center.
 Your demonstration should include two parts.
-1. (6%) 5-minute introduction to your project include:
+1. (5%) 3-minute introduction to your robot include:
    - (1%) Your team
    - (2%) Background and objectives
-   - (3%) Methodology
-2. (24%) Live demo on coffee delivery.
+   - (2%) Methodology
+2. (10%) Live demo on coffee delivery.
    - You can attempt 3 times (from the start point)
-   - During any attempt, you set your goal 5 times maximum by cliking the `2D Goal Pose` button in Rviz2
-
-**NOTE**: you will work with a highly integrated system, any subtle malfunction could fail the entire system.
-Check your wire connections and battery health, regularly. 
-Do simple unit tests if anything is not functional. 
-Take notes for things you cannot memorize.
-And don't be discouraged to start everything over.
+   - During any attempt, you can set navigation goal 5 times maximum by cliking the `2D Goal Pose` button in Rviz2
+3. (10%) Live demo on return of the robot.
+   - You can attempt 3 times (from the start point)
+   - During any attempt, you can set navigation goal 5 times maximum by cliking the `2D Goal Pose` button in Rviz2
+3. (5%) Answer questions.
+   Any audience may be interested. So, get familiar with your robot and be prepare to answer the questions.
+   
+You will work with a highly integrated system, any subtle malfunction could fail the entire system.
+- Check your wire connections and battery health **regularly**. 
+- Do simple **unit tests** if anything is not functional. 
+- **Take notes** for things you cannot memorize.
+- And **don't be discouraged** to start everything over.
 
 ## Documentation
 
