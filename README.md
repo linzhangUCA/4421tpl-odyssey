@@ -2,15 +2,13 @@
 
 ## Intro
 Welcome to your final (second) project. 
-In this project, your robot is expected to navigate from an entrance of Lewis Science Center to the PAE Department office, **autonomously**. 
-The starting point and destination is illustrated in the diagrams below.
-To test the navigation is successful or not, your robot needs to deliver a cup of coffee to the front desk in the office. 
+In this project, your robot is expected to **autonomously** navigate in Lewis Science Center from room 159 (Dr. Chen's lab) to room 171 (PAE Department office). 
+The starting point and destination is illustrated in the diagram below.
+To test the navigation is successful or not, your robot needs to deliver a cup of coffee to the front desk in the office (Rm. 171). 
 
 - The floor plan for the interested area in Lewis Science Center is shown below.
-![path](figures/lsc_nav_floorplan.png)
+![odyssey_map](images/odyssey_map.png)
 
-- A roughly measured floor dimensions is illustrated below.
-![dimensions](figures/lsc_nav_dimensions.png)
 
 ## Objectives
 - Prepare autonomous navigation with [slam_toolbox](https://github.com/SteveMacenski/slam_toolbox).
@@ -88,6 +86,7 @@ Include/Upload the pakcage in this repository.
    2. Descriptions of the mechanism/process of the key features. 
      
 ### (30%) Demonstration
+**Time: Thursday, May 1st @ 11 A.M.**
 Deliver a cup of coffee to PAE department office using your robot.
 You are expected to demonstrate the robot not only to the people from Annex 105, but also to anyone who may show up on the hallway of Lewis Science Center.
 Your demonstration should include two parts.
