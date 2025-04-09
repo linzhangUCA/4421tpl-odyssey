@@ -88,7 +88,7 @@ Include/Upload the pakcage in this repository.
 3. (5%) Illustrate a graph of ROS Nodes with all participating/active nodes and topics.
 4. (10%) Search and read the SLAM algorithm you've been used in this project.
    Imagine your readers are engineering major freshmen.
-   State following with your own words and math expressions in [SLAM Approach](README.md#slam_approach) section:
+   State following with your own words and math expressions in [SLAM Approach](README.md#slam-approach) section:
    1. List of key concepts, algorithms, functionalities.
    2. Descriptions of the mechanism/process of the key features. 
      
