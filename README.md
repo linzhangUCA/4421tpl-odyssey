@@ -40,7 +40,10 @@ Include/Upload the pakcage in this repository.
     > Launch this file on **Raspberry Pi**.
 3. Prepare the configuration files in `<your package path>/configs/` directory.
     - a reasonable **`mapping_configs.yaml`** file for `slam_toolbox`package's `online_async_launch.py`.
+      - `String value is: mapping` is expected by checking the parameter value: `ros2 param get /slam_toolbox mode`.
     - a reasonable **`localization_configs.yaml`** file for `slam_toolbox` package's `localization_launch.py`.
+      - `String value is: localization` is expected by checking the parameter value: `ros2 param get /slam_toolbox mode`.
+      - `String value is: /home/<user name>/<ros workspace name>/src/<project name>/<package name>/maps/final_map` is expected by checking the parameter value: `ros2 param get /slam_toolbox map_file_name`.
     - a reasonable **`nav_configs.yaml`** file for `nav2_bringup` package's `navigation_launch.py`.
     - (optional) a reasonable `gamepad_config.yaml` file for `teleop_twist_joy` package's `teleop-launch.py`.
 4. Develop a launch file: **`create_map.launch.py`** , to map interested area.
@@ -63,7 +66,8 @@ Include/Upload the pakcage in this repository.
 7. Fill correct information in `package.xml` and `setup.py`.
    
 #### Hints
-- Refer to `[homer_control](https://github.com/linzhangUCA/homer/tree/main/homer_control)` package. You can find examples for every step.
+- Refer to [`homer_control`](https://github.com/linzhangUCA/homer/tree/main/homer_control) package.
+  You can find examples for every step.
 - To publish `/odom` topic and broadcast tf from `odom` to `base_link`, you'll need to calculate the robot's pose and read its velocity to fill the `nav_msgs/msg/Odometry` and `geometry_msgs/msg/TransformStamped` message.
   Refer to [Assignment 3](https://classroom.github.com/a/R9LNWs9-) and [Assignment 5](https://classroom.github.com/a/cGOzC79L).
 - Read ROS [tutorials](https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Launch/Launch-Main.html) about **Launch** if you feel difficult to get the launch files managed.
@@ -72,27 +76,44 @@ Include/Upload the pakcage in this repository.
   - [Easy SLAM with ROS using slam_toolbox](https://www.youtube.com/watch?v=ZaiA3hWaRzE)
   - [Making robot navigation easy with Nav2 and ROS!](https://www.youtube.com/watch?v=jkoGkAd0GYk)
   
-### Documentation
-- Use this `README` file or create a separate markdown file or upload a pdf file for the documentation.
-- Describe the project in concise words. 
-- Have the documents well organized (break it down into sections). 
-- Please include following contents in your documents.
-    1. **(10%)** Update the old supportive documents with new configurations (wiring diagram, mechanical schematics, software workflow, etc.). If not changed, provide a link or a copy of the old files.
-    2. **(18%)** Describe the approaches your team employed to map the world, to localize the robot, to plan the trajectories and to follow the trajectories(the more technical details the better).
-    3. **(10%)** Read the [NSPE Code of Ethics for Engineers](https://www.nspe.org/resources/ethics/code-ethics), evaluate your project using the [Code](https://www.nspe.org/resources/ethics/code-ethics). **You may want to submit such a discussion individually.** 
-    5. **(2%)** Summarize achievements you've made in this project (bulleted items are welcome). You can share any thoughs or interesting findings, or discuss the future of the applications here as well.
+### (30%) Document the project in the [Documentation](README.md#documentation) section.
+1. (5%) Illustrate a Schematic of mechanical design with specific dimensions and locations of key components.
+2. (5%) Illustrate a Wiring diagram for the relationships among the batteries, motors, motor driver, Pico board, power management board and Raspberry Pi.
+   Please mark/denote the signal wires and power wires.
+3. (5%) Illustrate a graph of ROS Nodes with all participating/active nodes and topics.
+4. (15%) Search and read the SLAM algorithm you've been used in this project.
+   Imagine your readers are engineering major freshmen.
+   Explain following approaches as concise and as possible:
+   1. Localization algorithm with.
+      1. name
+      2. mechanism/process
+   2. Mapping algorithm with.
+      1. name
+      2. mechanism/process
+  > Math is welcome.
+     
+### Demonstration
+You are expected to demonstrate the robot not only to the people from Annex 105, but also to anyone who may show up on the hallway of Lewis Science Center.
+Your demonstration 
+1. 5-minute introduction include:
+   - Your team
+   - Your robot
+   - Background and objectives of this project
+   - Methodology
+2. Live demo on coffee delivery
 
+## Documentation
 
+### Mechanical Design
+![]()
 
-### 2.2 Trouble Shooting
-- **Q: What if I don't have an IMU?**
+### Wiring Diagram
+![]()
 
-A: Open the extended Kalman-Filter configuration file: [`ekf.yaml`](diffbot_navigation/config/ekf.yaml), comment or delete the `imu0` related contents.
-- **Q: How do I save a map?**
+### Node Graph
+![]()
 
-A: In Rviz, click `Panels` > `Add New Panel`, then select `SlamToolboxPlugin`, then press `OK`. You'll find a new panel opened on the left of your Rviz window. Select the text box next to the `Serialize Map` button, input the **full path** of your map file name. For example: `/home/<USERNAME>/<ROS_WORKSPACE_NAME>/src/<PROJECT_REPOSITORY_NAME>/diffbot_navigation/map/serialized_playground`. You can obtain the [`map`](diffbot_navigation/map/) folder path in vscode by right-click it, then select `Copy Path`. When you paste the path to the `Serialize Map` text box, **DO NOT forget to append a map name**. 
-- **Q: How do I load a map?**
+### Localization Algorithm
 
-A: Open [`slam_localize_params`](diffbot_navigation/config/slam_localize_params.yaml), find the `map_file_name:` parameter (around line 19), edit the path according to your saved map path and name. For example: `/home/<USERNAME>/<ROS_WORKSPACE_NAME>/src/<PROJECT_REPOSITORY_NAME>/diffbot_navigation/map/serialized_playground`.
-
+### Mapping Algorithm
 
