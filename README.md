@@ -28,15 +28,32 @@ Include/Upload the pakcage in this repository.
     - Broadcast transformation **from `odom` frame to `base_link` frame** with `geometry_msgs/msg/TransformStamped` message.
     - Subscribe to `/cmd_vel` topic, send robot's target velocity to Pico use values embedded in the `geometry_msgs/msg/Twist` message.   
     > Run this node on **Raspberry Pi**.
-2. Organize a launch file: **`bringup_driver.launch.py`**, to get the robot ready for SLAM.
+2. Develop a launch file: **`bringup_driver.launch.py`**, to get the robot ready for SLAM.
     - Broadcast reasonable static transformation from `base_link` to `base_footprint`.
     - Broadcast reasonable static transformation from `base_link` to `lidar_link`.
     - Start `rplidar_node` node with its `frame_id` parameter set to `'lidar_link'` and `angle_compensate` parameter set to `True`.
     - Start `hardware_interface` node.
     > Launch this file on **Raspberry Pi**.
-3. Organize a launch file: **`create_map.launch.py`** , to map interested area.
-   
-4. Organize a launch file: **`navigation.launch.py`**, for autonomous navigation.
+3. Prepare the configuration files in `<your package path>/configs/` directory.
+    - a reasonable **`mapping_configs.yaml`** file for `slam_toolbox`package's `online_async_launch.py`.
+    - a reasonable **`localization_configs.yaml`** file for `slam_toolbox` package's `localization_launch.py`.
+    - a reasonable **`nav_configs.yaml`** file for `nav2_bringup` package's `navigation_launch.py`.
+    - (optional) a reasonable `gamepad_config.yaml` file for `teleop_twist_joy` package's `teleop-launch.py`.
+4. Develop a launch file: **`create_map.launch.py`** , to map interested area.
+    - Launch `teleop_launch.py` from `teleop_twist_joy` package.
+    - Launch `online_async_launch.py` from `slam_toolbox` package with:
+        - `use_sim_time` set to `false`.
+        - `slam_params_file` set to a customed `mapping_configs.yaml`.
+    - Start `rviz2`.
+5. Save/Serialize the map and save the map to **`<your package path>/maps/final_map.data`** and **`<your package path>/maps/final_map.posegraph`**
+6. Develop a launch file: **`final_navigation.launch.py`**, for autonomous navigation.
+    - Launch `localization_launch.py` from `slam_toolbox` package with:
+        - `use_sim_time` set to `false`.
+        - `slam_params_file` set to a customed `localization_configs.yaml`.
+    - Launch `navigation_launch.py` from `nav2_bringup` package with:
+        - `use_sim_time` set to `false`.
+        - `params_file` set to a customed `nav_configs.yaml`.
+    - Start `rviz2`.
 
 #### Hints
 - To publish `/odom` topic and broadcast tf from `odom` to `base_link`, you'll need to calculate the robot's pose and read its velocity to fill the `nav_msgs/msg/Odometry` and `geometry_msgs/msg/TransformStamped` message.
