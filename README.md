@@ -15,13 +15,7 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 ## Objectives
 - Prepare autonomous navigation with [slam_toolbox](https://github.com/SteveMacenski/slam_toolbox).
 - Practice ROS navigation stack with [Nav2](https://docs.nav2.org/).
-- Verify delivery solutions.
-
-**NOTE**: you will work with a highly integrated system, any subtle malfunction could fail the entire system.
-Check your wire connections and battery health, regularly. 
-Do simple unit tests if anything is not functional. 
-Take notes for things you cannot memorize.
-And don't be discouraged to start everything over.
+- Deliver coffee (No spill, hopefully).
 
 ## Requirements
 
@@ -104,6 +98,12 @@ Your demonstration should include two parts.
 2. (24%) Live demo on coffee delivery.
    - You can attempt 3 times (from the start point)
    - During any attempt, you set your goal 5 times maximum by cliking the `2D Goal Pose` button in Rviz2
+
+**NOTE**: you will work with a highly integrated system, any subtle malfunction could fail the entire system.
+Check your wire connections and battery health, regularly. 
+Do simple unit tests if anything is not functional. 
+Take notes for things you cannot memorize.
+And don't be discouraged to start everything over.
 
 ## Documentation
 
