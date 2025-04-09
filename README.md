@@ -18,10 +18,6 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 ## Requirements
 
 ### (45%) ROS Package
-- Create or reuse a ROS package to host following modules. 
-Include/Upload the pakcage in this repository.
-- Grader(s) will download your package to a computer with ROS 2 installed.
-  Your package will be built and verified if all the executables and launch files are functional or not.
   
 1. **(11%)** Develope a **`hardware_interface`** node for controlling and monitoring the robot. 
     - (4%) Publish **`/odom`** topic with `nav_msgs/msg/Odometry` message according to robot's actual velocity received from Pico.
@@ -61,7 +57,11 @@ Include/Upload the pakcage in this repository.
     - (1%) Start `rviz2`.
     > Launch this file on **your laptop**.
 7. **(2%)** Fill correct information in `package.xml` and `setup.py`.
-   
+
+> - Create or reuse a ROS package to host following modules. 
+Include/Upload the pakcage in this repository.
+> - Grader(s) will download your package to a computer with ROS 2 installed.
+Your package will be built and verified if all the executables and launch files are functional or not.
 #### Hints
 - Refer to [`homer_control`](https://github.com/linzhangUCA/homer/tree/main/homer_control) package.
   You can find examples for every step.
@@ -75,10 +75,11 @@ Include/Upload the pakcage in this repository.
   - [Making robot navigation easy with Nav2 and ROS!](https://www.youtube.com/watch?v=jkoGkAd0GYk)
   
 ### (25%) Document the project in the [Documentation](README.md#documentation) section.
-1. (5%) Illustrate a Schematic of mechanical design with specific dimensions and locations of key components.
-2. (5%) Illustrate a Wiring diagram for the relationships among the batteries, motors, motor driver, Pico board, power management board and Raspberry Pi.
+1. (5%) Illustrate a schematic of mechanical design with specific dimensions and locations of key components.
+2. (5%) Illustrate a wiring diagram for the relationships among the batteries, motors, motor driver, power management board, Raspberry Pi and Pico.
    Please mark/denote the signal wires and power wires.
 3. (5%) Illustrate a graph of ROS Nodes with all participating/active nodes and topics.
+> You can upload all the drawings and figures to the [images/](images/) directory.
 4. (10%) Search and read the SLAM algorithm you've been used in this project.
    Imagine your readers are engineering major freshmen.
    State following with your own words and math expressions in [SLAM Approach](README.md#slam-approach) section:
