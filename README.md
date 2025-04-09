@@ -18,6 +18,10 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 - Verify delivery solutions.
 
 ## Requirements
+- Please complete the contents required below and strictly follow the required file names.
+- Grader(s) will download your package to a computer with ROS 2 installed.
+  Your package will be built and verified if all the executables and launch files are functional or not.
+  
 ### ROS Package
 
 Create or reuse a ROS package to host following modules. 
@@ -31,7 +35,7 @@ Include/Upload the pakcage in this repository.
 2. Develop a launch file: **`bringup_driver.launch.py`**, to get the robot ready for SLAM.
     - Broadcast reasonable static transformation from `base_link` to `base_footprint`.
     - Broadcast reasonable static transformation from `base_link` to `lidar_link`.
-    - Start `rplidar_node` node with its `frame_id` parameter set to `'lidar_link'` and `angle_compensate` parameter set to `True`.
+    - Start `rplidar_ros` package's `rplidar_node` node with its `frame_id` parameter set to `'lidar_link'` and `angle_compensate` parameter set to `True`.
     - Start `hardware_interface` node.
     > Launch this file on **Raspberry Pi**.
 3. Prepare the configuration files in `<your package path>/configs/` directory.
@@ -45,6 +49,7 @@ Include/Upload the pakcage in this repository.
         - `use_sim_time` set to `false`.
         - `slam_params_file` set to a customed `mapping_configs.yaml`.
     - Start `rviz2`.
+    > Launch this file on **your laptop**.
 5. Save/Serialize the map and save the map to **`<your package path>/maps/final_map.data`** and **`<your package path>/maps/final_map.posegraph`**
 6. Develop a launch file: **`final_navigation.launch.py`**, for autonomous navigation.
     - Launch `localization_launch.py` from `slam_toolbox` package with:
@@ -54,8 +59,11 @@ Include/Upload the pakcage in this repository.
         - `use_sim_time` set to `false`.
         - `params_file` set to a customed `nav_configs.yaml`.
     - Start `rviz2`.
-
+    > Launch this file on **your laptop**.
+7. Fill correct metadata in `package.xml` and `setup.py`.
+   
 #### Hints
+- Refer to `[homer_control](https://github.com/linzhangUCA/homer/tree/main/homer_control)` package. You can find examples for every step.
 - To publish `/odom` topic and broadcast tf from `odom` to `base_link`, you'll need to calculate the robot's pose and read its velocity to fill the `nav_msgs/msg/Odometry` and `geometry_msgs/msg/TransformStamped` message.
   Refer to [Assignment 3](https://classroom.github.com/a/R9LNWs9-) and [Assignment 5](https://classroom.github.com/a/cGOzC79L).
 - .
