@@ -1,6 +1,6 @@
 # Final Project: The Odyssey
 
-## Intro
+## Overview
 In this project, your robot is expected to **autonomously** navigate in Lewis Science Center from room 159 (Dr. Chen's lab) to room 171 (PAE Department office). 
 The starting point and destination is illustrated in the diagram below.
 To test the navigation is successful or not, your robot needs to deliver a cup of coffee to the front desk in the office (Rm. 171). 
@@ -15,8 +15,19 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 - Deliver coffee (No spill, hopefully).
 
 ## Requirements
+### Deliverables
+- Presentation slides
+- Coffee cup container design and installation guide.
+- ROS package.
 
-### (45%) ROS Package
+### 1. 3-Minute Presentation
+
+### 2. Coffee Delivery Solution and Instructions
+
+### 3. Navigation Algorithm
+
+### 4. Navigation Package
+- 
   
 1. **(11%)** Develope a **`hardware_interface`** node for controlling and monitoring the robot. 
     - (4%) Publish **`/odom`** topic with `nav_msgs/msg/Odometry` message according to robot's actual velocity received from Pico.
