@@ -21,12 +21,12 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 2. Navigation approaches
 3. Coffee delivery solutions
    
-### 2. Coffee Delivery Solution and Instructions
+### 2. Coffee Delivery Solution and Installation Guide
 
 ### 3 Navigation
 1. Map the intrested region using proper ROS 2 nodes.
    Upload map files to project repository. 
-2. 
+2. Develop an action client  
 - Develop an action client to guide the robot approaching the destination(s).
 - Correctly configure navigation parameters for Nav2.
   
