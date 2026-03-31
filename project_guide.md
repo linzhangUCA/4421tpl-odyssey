@@ -15,19 +15,20 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 - Deliver coffee (No spill, hopefully).
 
 ## Requirements
-### Deliverables
-- Presentation slides
-- Coffee cup container design and installation guide.
-- ROS package.
 
 ### 1. 3-Minute Presentation
-
+1. Objectives and background
+2. Navigation approaches
+3. Coffee delivery solutions
+   
 ### 2. Coffee Delivery Solution and Instructions
 
-### 3. Navigation Algorithm
-
-### 4. Navigation Package
-- 
+### 3 Navigation
+1. Map the intrested region using proper ROS 2 nodes.
+   Upload map files to project repository. 
+2. 
+- Develop an action client to guide the robot approaching the destination(s).
+- Correctly configure navigation parameters for Nav2.
   
 1. **(11%)** Develope a **`hardware_interface`** node for controlling and monitoring the robot. 
     - (4%) Publish **`/odom`** topic with `nav_msgs/msg/Odometry` message according to robot's actual velocity received from Pico.
