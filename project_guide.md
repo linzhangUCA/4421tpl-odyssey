@@ -25,10 +25,16 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 
 ### 3 Navigation
 1. Map the intrested region using proper ROS 2 nodes.
-   Upload map files to project repository. 
-2. Develop an action client  
-- Develop an action client to guide the robot approaching the destination(s).
-- Correctly configure navigation parameters for Nav2.
+   - Upload map files to the project repository.
+   - Log commands for start the mapping in [README](README.md). 
+2. Develop a ROS node (in a Python script)for navigating the robot to its destination.
+3. Packge your ROS node and upload to the project repository.
+   Indicate maintainer's name, email, package description, license information in proper files.
+
+> [!NOTE]
+> **Bonus**:
+> - Use action for navigation.
+> - List `rosdep` recognizable dependencies.
   
 1. **(11%)** Develope a **`hardware_interface`** node for controlling and monitoring the robot. 
     - (4%) Publish **`/odom`** topic with `nav_msgs/msg/Odometry` message according to robot's actual velocity received from Pico.
