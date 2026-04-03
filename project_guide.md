@@ -109,7 +109,7 @@ Please cover the following contents in your presentation.
 - +5% if the robot dodged a dynamic obstabcle.
 - +2% if the robot indicated the end of the navigation on the board.
 - -5% if coffee spilled
-- $$-5d%$$ if the robot didn't get into the department office. $d$ is the euclidean distance from the robot's ending location to the closest point of the department door in meters.
+- $-5\times d$% if the robot didn't get into the department office. $d$ is the euclidean distance from the robot's ending location to the closest point of the department door in meters.
   The maximum distance penalty will be 50% of the total project points. 
 
 > [!TIP]
