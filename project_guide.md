@@ -4,23 +4,21 @@
 
 
 ## Overview
-In this project, your robot is expected to **autonomously** navigate in Lewis Science Center from room 159 (Dr. Chen's lab) to room 171 (PAE Department office). 
-The starting point and destination is illustrated in the diagram below.
-To test the navigation is successful or not, your robot needs to deliver a cup of coffee to the front desk in the office (Rm. 171). 
+In this project, your robot is expected to autonomously navigate the Lewis Science Center, traveling from Room 159 (Dr. Chen's lab) to Room 171 (PAE Department office). 
+To demonstrate that the navigation is successful, your robot must complete a physical payload task: delivering a cup of coffee to the front desk in Room 171.
 
-- The floor plan for the interested area in Lewis Science Center is shown below.
+- The starting point, destination, and floor plan for the area of interest are illustrated in the diagram below.
 
 ![odyssey_map](images/odyssey_map.png)
 
-- Coffee will be held in a **12 oz** cup, see dimensions below.
+- The coffee will be held in a standard 12 oz cup. Please refer to the dimensions below for your mechanical design.
 
 ![cup_dimensions](https://www.thepapercupcompany.com/assets/images/double-wall-coffee-dimesions21.gif)
 
-In this project, you will practice.
-- Task oriented designs.
-- Nitty-gritty of the autonomous navigation.
-  - The usage and configuration of `slam_toolbox` and Nav2. 
-  - Distributed operations with multiple nodes on multiple devices.
+Through this project, you will gain practical, hands-on experience with:
+- Task-oriented design: engineering a mechanical solution to safely transport a liquid payload.
+- The nitty-gritty of autonomous navigation: specifically, the usage, tuning, and configuration of slam_toolbox and Nav2.
+- Distributed operations: managing multiple ROS 2 nodes communicating across multiple devices.
 
 ## Get Started Resources
 Feel free to use the HomeR software suite as the infrustructure of the project.
