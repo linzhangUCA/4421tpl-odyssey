@@ -99,8 +99,7 @@ Please cover the following contents in your presentation.
 #### Procedure
 1. Place the robot on/behind the "Start Line".
 2. Start all ROS nodes and let the robot do the job by itself.
-3. Stop the robot and end the navigation with a visible indication.
-4. If robot didn't enter the department office, euclidean distance from the navigation cut-off location to the ce will be measured to determine your team's bonus and penalty.
+3. Robot stops by itself and end the navigation with a visible indication.
 
 #### Bonus/Penalty Points:
 - +2% if the robot made it out of LSC159.
