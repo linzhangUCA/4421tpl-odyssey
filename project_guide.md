@@ -31,12 +31,11 @@ Feel free to use the HomeR software suite as the infrustructure of the project.
 
 > [!TIP]
 > You will work with a highly integrated system, any tiny changes could fail the entire system.
-> - Don't wait until the last minute.
-> - Practice ahead as many times as possible.
+> - **Don't wait** until the last minute.
+> - **Practice** ahead as many times as possible.
 > - Check your wire connections and battery health **regularly**. 
 > - Do simple **unit tests** if something was wrong. 
 > - **Take notes** for things you cannot memorize.
-> - And **don't be discouraged** to start everything over.
 
 
 ## Requirements
@@ -53,7 +52,7 @@ Feel free to use the HomeR software suite as the infrustructure of the project.
 
 ### 2. (15%) Software Usage Instructions
 Assume a user is going to deploy the ROS 2 packages related to this project on a Raspberry Pi and a server computer (both with newly installed ROS 2 Jazzy, so, no HomeR packages, no `slam_toolbox`, no Nav2).
-Please provide instructions for the following steps:
+Please provide instructions for the following steps.
 - (3%) Installing and setting up dependent ROS 2 packages on the Raspberry Pi.
 - (3%) Installing and setting up dependent ROS 2 packages on the server computer.
 - (3%) Starting the map creation.
@@ -65,11 +64,9 @@ Please provide instructions for the following steps:
 > - (1%) Use CLI for map saving with functional commands.
 
 ### 3. (65%) Navigation Node
-- (15%) Map the coffee delivery region using proper ROS 2 packages and configurations.
-   - Upload map files to the project repository.
-   - Log commands for mapping in [README](README.md). 
-- (30%) Develop a ROS node (in a Python script)for navigating the robot to its destination.from the robot to the center of the "Home Base"
-- (10%) Config navigator with proper settings.
+- (10%) Upload the map files for the project.
+- (35%) Develop a functional ROS node (in a Python script)for navigating the robot to its destination.
+- (10%) Configure the navigator with proper settings.
 - (10%) Pack your ROS node(s) and configurations.
   Upload the package to the project repository.
   Indicate maintainer's name, email, package description, license information in proper files.
@@ -78,43 +75,42 @@ Please provide instructions for the following steps:
 
 > [!NOTE]
 > **Bonus**:
-> - Use action in the navigation node.
+> - (10%) Use ROS 2's action service for navigation in the code.
 
 ### 4. (Bonus) 3-Minute Presentation
-Please cover the following contents in your presentation and make sure the audience gets plenty eye contacts.
-1. Who you are and what are you going to present.
-2. Project objectives and results.
-3. Navigation approaches.
-4. Coffee delivery solutions.
-5. Technical Q&As (**No questions, no bonus**).
-
+Please cover the following contents in your presentation.
+1. (1%) Who you are and what are you going to present.
+2. (2%) Project objectives and results.
+3. (3%) Coffee and cup transportation solutions.
+4. (4%) Navigation approaches.
+5. (2%) Technical Q&As (**No questions, no bonus**).
    
 ### 5. (Bonus/Penalty) Demonstration
 > [!IMPORTANT]
 > #### Time: 11 AM - 1 PM on Thursday, Apr. 30th @ LSC159
 
 #### Rules
-> - Each team has **3 attempts**.
-> - Each attempt will be limited to 5 minutes.
-> - Teams with fewer attemps have higher priority in the queue.
-> - Bonus/Penalty will be given based on the best attempt.
+- Each team has **3 attempts**.
+- Each attempt will be limited to 5 minutes.
+- Teams with fewer attempts have higher priority in the queue.
+- Bonus/Penalty will be given based on the best attempt.
+- Any human intervention will terminate attempt immediately.
 
-### Procedure
+#### Procedure
 1. Place the robot on/behind the "Start Line".
-2. Start all ROS nodes.
+2. Start all ROS nodes and let the robot do the job by itself.
 3. Stop the robot and end the navigation with a visible indication.
 4. If robot didn't enter the department office, euclidean distance from the navigation cut-off location to the ce will be measured to determine your team's bonus and penalty.
-5. (Optional) Take interview, one question for each teammember.
 
-> [!NOTE]
-> **Bonus/Penalty Points**:
-> - +2 if the robot made it out of LSC159.
-> - +3 if the robor made it passing LSC167 (Dr. Mason's office). 
-> - +20 if the robot made it to the front desk of the department office.
-> - +10 if the robot dodged a dynamic obstabcle.
-> - +2 if the robot indicated the end of the navigation on the board.
-> - -5 if coffee spilled
-> - $$-5d$$ if the robot didn't get into the department office. $d$ is the euclidean distance from the robot's ending location to the closest point of the department door in meters.
->   The maximum distance penalty will be 50 points. 
+#### Bonus/Penalty Points:
+- +2% if the robot made it out of LSC159.
+- +3% if the robor made it passing LSC167 (Dr. Mason's office). 
+- +10% if the robot made it to the front desk of the department office.
+- +5% if the robot dodged a dynamic obstabcle.
+- +2% if the robot indicated the end of the navigation on the board.
+- -5% if coffee spilled
+- $$-5d%$$ if the robot didn't get into the department office. $d$ is the euclidean distance from the robot's ending location to the closest point of the department door in meters.
+  The maximum distance penalty will be 50% of the total project points. 
 
-Be expected to demonstrate the robot not only to the people from Annex 105, but also to anyone who may show up in the hallway of Lewis Science Center.
+> [!TIP]
+> Be expected to demonstrate the robot and answer the questions not only to the people from Annex 105, but also to anyone who may show up during the demo.
