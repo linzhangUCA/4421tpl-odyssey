@@ -2,6 +2,7 @@
 > [!IMPORTANT]
 > # Due: Friday, May 1st @ 12 PM
 
+
 ## Overview
 In this project, your robot is expected to **autonomously** navigate in Lewis Science Center from room 159 (Dr. Chen's lab) to room 171 (PAE Department office). 
 The starting point and destination is illustrated in the diagram below.
@@ -33,7 +34,7 @@ Feel free to use the HomeR software suite as the infrustructure of the project.
 > - Don't wait until the last minute.
 > - Practice ahead as many times as possible.
 > - Check your wire connections and battery health **regularly**. 
-> - Do simple **unit tests** if something is not functional. 
+> - Do simple **unit tests** if something was wrong. 
 > - **Take notes** for things you cannot memorize.
 > - And **don't be discouraged** to start everything over.
 
@@ -48,7 +49,7 @@ Feel free to use the HomeR software suite as the infrustructure of the project.
 
 > [!NOTE]
 > **Bonus**:
-> - Illustrate installation with graphical ways.
+> - (5%) Reasonable graphical installation guide.
 
 ### 2. (15%) Software Usage Instructions
 Assume a user is going to deploy the ROS 2 packages related to this project on a Raspberry Pi and a server computer (both with newly installed ROS 2 Jazzy, so, no HomeR packages, no `slam_toolbox`, no Nav2).
@@ -61,18 +62,18 @@ Please provide instructions for the following steps:
 
 > [!NOTE]
 > **Bonus**:
-> - Use CLI for map saving.
+> - (1%) Use CLI for map saving with functional commands.
 
 ### 3. (65%) Navigation Node
-- Map the intrested region using proper ROS 2 packages and configurations.
+- (15%) Map the coffee delivery region using proper ROS 2 packages and configurations.
    - Upload map files to the project repository.
    - Log commands for mapping in [README](README.md). 
-- Develop a ROS node (in a Python script)for navigating the robot to its destination.from the robot to the center of the "Home Base"
-- Config navigator with proper settings.
-- Pack your ROS node(s) and configurations.
+- (30%) Develop a ROS node (in a Python script)for navigating the robot to its destination.from the robot to the center of the "Home Base"
+- (10%) Config navigator with proper settings.
+- (10%) Pack your ROS node(s) and configurations.
   Upload the package to the project repository.
   Indicate maintainer's name, email, package description, license information in proper files.
-  Your package will be built on instructor's computer. 
+  Your package will be built on instructor's Raspberry Pi and server computer with freshly installed Ubuntu and ROS 2 Jazzy. 
 - (Optional) Upload any software that is different from the HomeR collections. 
 
 > [!NOTE]
