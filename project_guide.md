@@ -1,5 +1,6 @@
 # Final Project: The Odyssey
-# Due: Friday, May 1st @ 12 PM
+> [!IMPORTANT]
+> # Due: Friday, May 1st @ 12 PM
 
 ## Overview
 In this project, your robot is expected to **autonomously** navigate in Lewis Science Center from room 159 (Dr. Chen's lab) to room 171 (PAE Department office). 
@@ -10,16 +11,24 @@ To test the navigation is successful or not, your robot needs to deliver a cup o
 
 ![odyssey_map](images/odyssey_map.png)
 
-Coffee cup dimensions:
+- Coffee will be held in a **12 oz** cup, see dimensions below.
 
 ![cup_dimensions](https://www.thepapercupcompany.com/assets/images/double-wall-coffee-dimesions21.gif)
 
-- Prepare autonomous navigation with [slam_toolbox](https://github.com/SteveMacenski/slam_toolbox).
-- Practice ROS navigation stack with [Nav2](https://docs.nav2.org/).
-- Deliver coffee (No spill, hopefully).
+In this project, you will practice.
+- Task oriented designs.
+- Nitty-gritty of the autonomous navigation.
+  - The usage and configuration of `slam_toolbox` and Nav2. 
+  - Distributed operations with multiple nodes on multiple devices.
 
 ## Get Started Resources
-> [!NOTE]
+Feel free to use the HomeR software suite as the infrustructure of the project.
+- Motion control on the microcontroller: [`homer_pico`](https://github.com/linzhangUCA/homer_pico)
+- Motion control interface on the Raspberry Pi: [`homer_bringup`](https://github.com/linzhangUCA/homer_bringup)
+- SLAM and navigation on the server computer: [`homer_navigation`](https://github.com/linzhangUCA/homer_navigation)
+- For more detailed guides, please refer to the HomeR's [documentation](https://linzhanguca.github.io/homer_docs/).
+
+> [!TIP]
 > You will work with a highly integrated system, any tiny changes could fail the entire system.
 > - Don't wait until the last minute.
 > - Practice ahead as many times as possible.
@@ -31,30 +40,30 @@ Coffee cup dimensions:
 
 ## Requirements
 
-### 1. Coffee Delivery Solutions
-- Introduce mechanical design of your team's coffee delivery solution in [README](README.md).
+### 1. (20%) Coffee Delivery Solutions
+- Introduce mechanical designs of your team's coffee delivery solution.
   - Illustrate layout of key components. 
-  - Upload sketches or techdraws with critical dimensions
+  - Upload sketches or techdraws with critical dimensions, and display them in [README](README.md).
 - Provide an installation guide in [README](README.md).
 
 > [!NOTE]
 > **Bonus**:
 > - Illustrate installation with graphical ways.
 
-### 2. Software Usage Instructions
-Assume a user is going to deploy the ROS 2 packages developed related to this project on a Raspberry Pi and a server computer with newly installed ROS 2 Jazzy (no HomeR packages, no `slam_toolbox`, no Nav2).
-Please provide instructions for the key steps of:
-- setting up related ROS 2 packages on the Raspberry Pi.
-- setting up related ROS 2 packages on the server computer.
-- starting the map creation.
-- Saving the map.
-- (**Tricky**) starting the autonomous navigation with the saved map.
+### 2. (15%) Software Usage Instructions
+Assume a user is going to deploy the ROS 2 packages related to this project on a Raspberry Pi and a server computer (both with newly installed ROS 2 Jazzy, so, no HomeR packages, no `slam_toolbox`, no Nav2).
+Please provide instructions for the following steps:
+- (3%) Installing and setting up dependent ROS 2 packages on the Raspberry Pi.
+- (3%) Installing and setting up dependent ROS 2 packages on the server computer.
+- (3%) Starting the map creation.
+- (3%) Saving the map.
+- (3%) Starting the autonomous navigation with the saved map.
 
 > [!NOTE]
 > **Bonus**:
 > - Use CLI for map saving.
 
-### (65%) 3. Navigation Node
+### 3. (65%) Navigation Node
 - Map the intrested region using proper ROS 2 packages and configurations.
    - Upload map files to the project repository.
    - Log commands for mapping in [README](README.md). 
@@ -70,14 +79,18 @@ Please provide instructions for the key steps of:
 > **Bonus**:
 > - Use action in the navigation node.
 
-### 4. 3-Minute Presentation
-1. Objectives and background
-2. Navigation approaches
-3. Coffee delivery solutions
-4. Q & A.
+### 4. (Bonus) 3-Minute Presentation
+Please cover the following contents in your presentation and make sure the audience gets plenty eye contacts.
+1. Who you are and what are you going to present.
+2. Project objectives and results.
+3. Navigation approaches.
+4. Coffee delivery solutions.
+5. Technical Q&As (**No questions, no bonus**).
+
    
-### (30%) 5. Demonstration
-#### Time: 11 AM - 1 PM on Thursday, Apr. 30th @ LSC159
+### 5. (Bonus/Penalty) Demonstration
+> [!IMPORTANT]
+> #### Time: 11 AM - 1 PM on Thursday, Apr. 30th @ LSC159
 
 #### Rules
 > - Each team has **3 attempts**.
@@ -103,5 +116,4 @@ Please provide instructions for the key steps of:
 > - $$-5d$$ if the robot didn't get into the department office. $d$ is the euclidean distance from the robot's ending location to the closest point of the department door in meters.
 >   The maximum distance penalty will be 50 points. 
 
-You are expected to demonstrate the robot not only to the people from Annex 105, but also to anyone who may show up in the hallway of Lewis Science Center.
-Your demonstration should include two parts.
+Be expected to demonstrate the robot not only to the people from Annex 105, but also to anyone who may show up in the hallway of Lewis Science Center.
